@@ -1,9 +1,0 @@
-const express = require('express');
-const { createCat } = require('../controller/cat.contorller');
-const {categorySchema} = require('../joiSchema/category.joi');
-const joiVaidator = require('../middleware/validator.middleware')
-const router = express.Router();
-
-router.post('/create', joiVaidator, createCat);
-
-module.exports = router;
